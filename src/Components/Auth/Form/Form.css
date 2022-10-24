@@ -1,0 +1,88 @@
+form {
+    margin-top: 2.7rem;
+}
+h2 {
+    margin: 0;
+    margin-bottom: 3.2rem;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: 600;
+}
+.mb-32 {
+    margin-bottom: 3.2rem;
+}
+
+  
+
+
+
+form .col-2 {
+    display: flex;
+    gap: 3.2rem;
+}
+.col-2 .form-input {
+    flex-basis: 50%;
+
+}
+label {
+    display: block;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: 600;
+    color: #707070;
+    margin-bottom: 1rem;
+}
+input, select {
+    outline: 0;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    color: #707070;
+    font-weight: 400;
+    border-radius: .7rem;
+    border: 1px solid #BEC2C6;
+    padding: 1.5rem;
+}
+input, select {
+    display: block;
+    width: 100%;
+}
+.password {
+    position: relative;
+}
+.password img {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+.btn {
+    display: block;
+    width: 100%;
+    padding: 1.3rem 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 3.3rem;
+    background-color: #4375FF;
+    border: 0;
+    border-radius: .7rem;
+    margin-top: 6rem;
+    margin-bottom: 4.8rem;
+}
+form span,form a {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: 400;
+}
+form a {
+    color: #4375FF;
+}
+form .forget-link  {
+    text-align: right;
+    margin-top: .8rem;
+}
+form .forget-link  a{
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: 400;
+    color: #707070;
+}

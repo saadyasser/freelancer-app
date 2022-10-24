@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import './App.css';
+import AuthContext from './AuthContext/AuthContext';
+import Form from './Components/Auth/Form/Form';
+import Layout from './Components/Auth/Layout';
+import Footer from './Components/Footer/Footer';
+import Logo from './Components/Logo/Logo';
+import SignIn from './pages/SignIn/SignIn';
+import SignUp from './pages/SignUp/SignUp';
 
 function App() {
+  const login = useContext(AuthContext);
+  console.log(login.token, 'dddd');
+  const navigate = useNavigate();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+       <Layout footer={<Footer />} logo={<Logo />}>
+        <Routes>
+          <Route path="/" element={ <div>
+              <div>Home</div>
+              { login.isLoggedIn && <div onClick={() => {
+                localStorage.removeItem('token');
+                login.removeToken();
+            }}>logout</div> }
+              </div> }/>
+          !login.isLoggedIn && <Route path="/signup" element={!login.isLoggedIn ?<SignUp link="https://talents-valley.herokuapp.com/api/user/signup"/> : <Navigate to="/" />}/>
+          !login.isLoggedIn && <Route path="/signin" element={!login.isLoggedIn ? <SignIn link="https://talents-valley.herokuapp.com/api/user/login"/> : <Navigate to="/" />}/>
+          <Route path="*" element={<Navigate to="/" />}/>
+        </Routes>
+      </Layout>
   );
 }
 

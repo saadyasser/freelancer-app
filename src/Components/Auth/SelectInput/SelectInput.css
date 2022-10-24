@@ -1,0 +1,32 @@
+form .col-2 {
+    display: flex;
+    gap: 3.2rem;
+}
+.col-2 .form-input {
+    flex-basis: 50%;
+
+}
+
+label {
+    display: block;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: 600;
+    color: #707070;
+    margin-bottom: 1rem;
+}
+select {
+    appearance: none;
+    outline: 0;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    color: #707070;
+    font-weight: 400;
+    border-radius: .7rem;
+    border: 1px solid #BEC2C6;
+    padding: 1.5rem;
+}
+select {
+    display: block;
+    /* width: 100%; */
+}

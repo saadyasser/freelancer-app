@@ -1,0 +1,14 @@
+.logo {
+    width: 100%;
+    text-align: center;
+}
+.logo img {
+    width: 12.3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 40px;
+    margin: 0;
+    font-weight: 600;
+}

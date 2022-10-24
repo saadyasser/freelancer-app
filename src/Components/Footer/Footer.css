@@ -1,0 +1,26 @@
+footer {
+    position: absolute;
+    bottom: 3.7rem;
+    left: 12rem;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+    padding-right: 6rem;
+}
+ul li:last-of-type {
+    list-style: none;
+    display: inline;
+    padding-right: 0;
+}
+ul li a {
+    color: #000;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    
+}
